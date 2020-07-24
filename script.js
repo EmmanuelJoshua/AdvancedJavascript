@@ -230,20 +230,17 @@ console.log(fromPairs2(data2));
 // -------> To be done
 
 //JavaScript Exercise 6
-// const unique = (array) => {
-//     let newArray = [];
-//     array.forEach(function (element) {
-//         for (var i = 0; i < array.length;i++) {
-//             if(element != array[i] ){
-               
-//             }else{
-//                 console.log('Hi'+i);
-//                 // break; 
-//             }
-//         }
-//     });
-//     return newArray;
-// }
+const unique = (array) => {
+    let newArray = [];
+    array.forEach(function (element) {
+       if(array.include(element)){
+            newArray.push(element);
+       }else{
+
+       }
+    });
+    return newArray;
+}
 
 // const data3 = [1, 2, 1, 2, 3];
 // console.log(unique(data3));

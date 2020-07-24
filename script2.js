@@ -51,3 +51,65 @@ const greet = (name='Joshua', time='Afternoon') => {
     return `Hi, ${name}. Good ${time}`;
 }
 
+
+class Player {
+    constructor(name, type){
+        this.name = name;
+        this.type = type;
+    }
+    introduce(){
+        console.log(`Hi, I am ${this.name}, I'm a ${this.type}`)
+    }
+}
+
+class Wizard extends Player{
+    constructor(name, type){
+        super(name, type)
+    }
+    play(){
+        super.introduce()
+    }
+}
+
+//includes keyword
+const pets = ['dogs', 'cats', 'rabbits'];
+pets.includes('dogs');
+
+//exponential keyword
+const square = (x) => x**2;
+const cube = (x) => x**3;
+
+//pad start and pad end
+const firstname = 'Joshua'
+const lastname = 'Emmanuel'
+firstname.padStart(10)
+lastname.padEnd(10)
+
+//using the JS interface Object on objects
+const users = {
+    user1: 'Joshua',
+    user2: 'Praise',
+    user3: 'Jeremiah'
+}
+
+Object.keys(users).forEach(key => {
+    console.log(key)
+});
+
+Object.values(users).forEach(values => {
+    console.log(values)
+})
+
+const testArray = [];
+
+Object.entries(users).forEach(entries => {
+    console.log(entries)
+    testArray.push(entries);
+})
+
+let obj5 = {
+    my: 'name',
+    is: 'Rudolf',
+    the: 'raindeer'
+}
+Object.entries(obj5).map(value => value.join(" ")).join(' ')
